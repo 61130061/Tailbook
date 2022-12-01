@@ -6,23 +6,18 @@ interface ButtonProps {
   shadow?: boolean,
   animation?: boolean,
   icon?: boolean,
-  outline?: boolean,
 }
 
 export default {
-  title: 'Button/Basic',
+  title: 'Button/Secondary',
 };
 
-export const Basic = ({ label, shadow, animation, icon, outline }: ButtonProps) => {
-  let css = "rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline disabled:bg-gray-400/80"
+export const Secondary = ({ label, shadow, animation, icon }: ButtonProps) => {
+  let css = "px-5 py-2 outline-none rounded font-medium hover:bg-indigo-400 hover:text-white focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 disabled:bg-gray-400/80 disabled:shadow-none disabled:cursor-not-allowed"
 
-  if (outline) {
-    css+=" border-[1.5px] border-indigo-500 text-indigo-500 fill-indigo-500 transition duration-500 ease select-none hover:text-white hover:fill-white hover:border-indigo-600 hover:bg-indigo-600"
-  } else {
-    css+=" bg-indigo-500 text-white fill-white"
-  }
+  css += " bg-indigo-50 text-indigo-500 fill-indigo-500 hover:fill-white"
 
-  if (shadow) css+=" shadow-indigo-700 shadow-md disabled:shadow-none disabled:cursor-not-allowed"
+  if (shadow) css+=" shadow-indigo-400 shadow-md disabled:shadow-none disabled:cursor-not-allowed"
 
   if (animation) css+=" active:shadow-none active:scale-95 transition-colors duration-75"
 
@@ -59,10 +54,9 @@ export const Basic = ({ label, shadow, animation, icon, outline }: ButtonProps) 
     </button>
   )
 }
-Basic.args = {
+Secondary.args = {
   label: 'Button',
   shadow: false,
   animation: false,
   icon: false,
-  outline: false
 };
