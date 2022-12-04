@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-interface InputProps {
+interface TextareaProps {
   placeholder?: string,
   rows?: number,
   dark?: boolean,
@@ -12,13 +12,13 @@ export default {
   title: 'Input/Textarea',
 };
 
-export const Primary = ({ placeholder, rows, dark, shadow }: InputProps) => {
-  let css = "w-full border-2 px-3 py-2 rounded-lg focus:outline-none focus:border-indigo-500";
+export const Textarea = ({ placeholder, rows, dark, shadow }: TextareaProps) => {
+  let css = "w-full border-[1.5px] px-3 py-2 rounded-lg focus:outline-none focus:ring-opacity-50 focus:ring-2 focus:ring-gray-300";
 
   if (dark) {
     css+=" bg-zinc-800 text-white border-gray-400";
   } else {
-    css+=" bg-white border-gray-300";
+    css+=" border-gray-300";
   }
 
   if (shadow) css+=" shadow-lg";
@@ -32,8 +32,8 @@ export const Primary = ({ placeholder, rows, dark, shadow }: InputProps) => {
     </textarea>
   )
 }
-Primary.args = {
-  placeholder: 'Type onn this thing',
+Textarea.args = {
+  placeholder: 'Type on this thing',
   rows: 6,
   dark: false,
   shadow: false,
