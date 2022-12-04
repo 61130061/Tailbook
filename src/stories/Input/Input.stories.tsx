@@ -46,7 +46,7 @@ export const Input = ({ placeholder, dark, shadow, type, icon }: InputProps) => 
           placeholder={placeholder}
           className={css + " w-full pr-[38px]"}
         />
-        <div className="absolute top-2 right-2 fill-gray-500 bg-white">
+        <div className={dark ? "absolute top-2 right-2 fill-gray-300" : "absolute top-2 right-2 fill-gray-500" }>
           <svg width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 487.95 487.95">
             <g>
               <g>
