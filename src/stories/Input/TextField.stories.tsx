@@ -1,5 +1,4 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 interface InputProps {
   placeholder?: string,
@@ -10,7 +9,7 @@ interface InputProps {
 }
 
 export default {
-  title: 'Input/Input',
+  title: 'Input/TextField',
   argTypes: {
     type: {
       options: ['text', 'email', 'password'],
@@ -22,7 +21,7 @@ export default {
   },
 };
 
-export const Input = ({ placeholder, dark, shadow, type, icon }: InputProps) => {
+export const TextField = ({ placeholder, dark, shadow, type, icon }: InputProps) => {
   let css = "px-3 py-2 rounded-lg border-[1.5px] focus:outline-none focus:ring-opacity-50 focus:ring-2 focus:ring-gray-300";
 
   if (dark) {
@@ -70,7 +69,7 @@ export const Input = ({ placeholder, dark, shadow, type, icon }: InputProps) => 
     </input>
   )
 }
-Input.args = {
+TextField.args = {
   placeholder: 'Placeholder',
   type: 'text',
   dark: false,
