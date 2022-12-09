@@ -5,30 +5,32 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 interface BadgeProps {
   remove?: boolean,
   icon?: boolean,
+  outlineColor?: boolean
 }
 
 export default {
   title: 'Display/Badge',
 };
 
-export const Badge = ({ remove, icon }: BadgeProps) => {
-  let spanCSS = "flex items-center gap-1 rounded-full text-white px-3 py-1 text-xs uppercase font-medium";
+export const Badge = ({ remove, icon, outlineColor }: BadgeProps) => {
+  let spanCSS = "flex items-center gap-1 border rounded-full px-3 py-1 text-xs uppercase font-medium";
+
   if (remove) spanCSS+=" pr-2"
   if (icon) spanCSS+=" pl-2"
 
   return (
     <div className="flex gap-3 text-sm">
       <span
-        className={spanCSS + " bg-blue-400"}
+        className={outlineColor ? spanCSS + " border-blue-400 bg-blue-100 text-blue-800 fill-blue-800" : spanCSS + " border-blue-400 bg-blue-400 text-white fill-white"}
       >
         {icon &&
-          <div className="fill-white w-[15px] h-[15px]">
+          <div className="w-[15px] h-[15px]">
             <svg width="14px" height="14px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z" /></svg>
           </div>
         }
         <div>Default</div>
         {remove &&
-          <div className="fill-white hover:cursor-pointer hover:bg-slate-100 hover:fill-blue-400 p-1 rounded-full">
+          <div className="hover:cursor-pointer hover:bg-slate-100 hover:fill-blue-400 p-1 rounded-full">
             <svg version="1.1" width="8px" height="8px" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 47.971 47.971">
               <g>
                 <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88
@@ -41,10 +43,10 @@ export const Badge = ({ remove, icon }: BadgeProps) => {
         }
       </span>
       <span
-        className={spanCSS + " bg-indigo-400"}
+        className={outlineColor ? spanCSS + " border-emerald-400 bg-emerald-100 text-emerald-800 fill-emerald-800" : spanCSS + " border-emerald-400 bg-emerald-400 text-white fill-white"}
       >
         {icon &&
-          <div className="fill-white w-[15px] h-[15px]">
+          <div className="w-[15px] h-[15px]">
             <svg version="1.1" width="14px" height="14px" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 330 330">
               <g>
                 <path d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M165,300
@@ -59,7 +61,7 @@ export const Badge = ({ remove, icon }: BadgeProps) => {
         }
         <div>Badge</div>
         {remove &&
-          <div className="fill-white hover:cursor-pointer hover:bg-slate-100 hover:fill-indigo-400 p-1 rounded-full">
+          <div className="hover:cursor-pointer hover:bg-slate-100 hover:fill-emerald-400 p-1 rounded-full">
             <svg version="1.1" width="8px" height="8px" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 47.971 47.971">
               <g>
                 <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88
@@ -72,10 +74,10 @@ export const Badge = ({ remove, icon }: BadgeProps) => {
         }
       </span>
       <span
-        className={spanCSS + " bg-rose-400"}
+        className={outlineColor ? spanCSS + " border-rose-400 bg-rose-100 text-rose-800 fill-rose-800" : spanCSS + " border-rose-400 bg-rose-400 text-white fill-white"}
       >
         {icon &&
-          <div className="fill-white w-[15px] h-[15px]">
+          <div className="w-[15px] h-[15px]">
             <svg version="1.1" width="14px" height="14px" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 201.21 201.21">
               <path d="M166.926,155.377c8.633-10.416,14.741-22.853,17.662-35.965l14.641,3.262c-3.435,15.42-10.612,30.039-20.754,42.275
               L166.926,155.377z M162.129,20.796c-12.603-9.675-27.482-16.296-43.03-19.146l-2.705,14.754c13.219,2.424,25.876,8.057,36.6,16.291
@@ -91,7 +93,7 @@ export const Badge = ({ remove, icon }: BadgeProps) => {
         }
         <div>Badge</div>
         {remove &&
-          <div className="fill-white hover:cursor-pointer hover:bg-slate-100 hover:fill-rose-400 p-1 rounded-full">
+          <div className="hover:cursor-pointer hover:bg-slate-100 hover:fill-rose-400 p-1 rounded-full">
             <svg version="1.1" width="8px" height="8px" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 47.971 47.971">
               <g>
                 <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88
@@ -109,4 +111,5 @@ export const Badge = ({ remove, icon }: BadgeProps) => {
 Badge.args = {
   remove: false,
   icon: true,
+  outlineColor: false,
 };
