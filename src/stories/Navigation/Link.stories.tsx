@@ -14,8 +14,7 @@ export const Link = ({ text, bold }: LinkProps) => {
 
   let css = "hover:underline hover:cursor-pointer hover:underline-offset-2";
 
-  if (bold) css+=" font-bold decoration-2"
-  else css+=" font-semibold"
+  if (bold) css+=" font-semibold decoration-2"
 
   return (
     <a
