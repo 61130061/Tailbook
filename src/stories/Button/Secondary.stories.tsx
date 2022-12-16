@@ -6,16 +6,22 @@ interface ButtonProps {
   shadow?: boolean,
   animation?: boolean,
   icon?: boolean,
+  rounded?: boolean,
+  bgColor?: boolean
 }
 
 export default {
   title: 'Button/Secondary',
 };
 
-export const Secondary = ({ label, shadow, animation, icon }: ButtonProps) => {
-  let css = "px-5 py-2 outline-none rounded font-medium hover:bg-indigo-400 hover:text-white focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 disabled:bg-gray-400/80 disabled:shadow-none disabled:cursor-not-allowed"
+export const Secondary = ({ label, shadow, animation, icon, rounded, bgColor }: ButtonProps) => {
+  let css = "px-5 py-2 outline-none font-medium focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 disabled:bg-gray-400/80 disabled:shadow-none disabled:cursor-not-allowed"
 
-  css += " bg-indigo-50 text-indigo-500 fill-indigo-500 hover:fill-white"
+  if (bgColor) css+=" bg-indigo-50 text-indigo-500 fill-indigo-500 hover:fill-white hover:bg-indigo-400 hover:text-white"
+  else css+=" bg-transparent text-indigo-500 hover:bg-indigo-50"
+
+  if (rounded) css+=" rounded-full"
+  else css+=" rounded-md"
 
   if (shadow) css+=" shadow-indigo-400 shadow-md disabled:shadow-none disabled:cursor-not-allowed"
 
@@ -40,7 +46,9 @@ export const Secondary = ({ label, shadow, animation, icon }: ButtonProps) => {
             <path d="M6.5 2C5.67157 2 5 2.67157 5 3.5V8.05001C3.85888 8.28164 3 9.29052 3 10.5C3 12.9853 5.01472 15 7.5 15H8C10.7614 15 13 12.7614 13 10V9.14706C13 7.96127 12.0387 7 10.8529 7H8V3.5C8 2.67157 7.32843 2 6.5 2Z" />
           </svg>
         </div>
-        <div>{label}</div>
+        {label &&
+          <div>{label}</div>
+        }
       </button>
     )
   }
@@ -59,4 +67,6 @@ Secondary.args = {
   shadow: false,
   animation: false,
   icon: false,
+  rounded: false,
+  bgColor: true
 };

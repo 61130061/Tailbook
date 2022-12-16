@@ -7,14 +7,21 @@ interface ButtonProps {
   animation?: boolean,
   icon?: boolean,
   outline?: boolean,
+  rounded?:boolean,
 }
 
 export default {
   title: 'Button/Basic',
 };
 
-export const Basic = ({ label, shadow, animation, icon, outline }: ButtonProps) => {
-  let css = "rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline disabled:bg-gray-400/80"
+export const Basic = ({ label, shadow, animation, icon, outline, rounded }: ButtonProps) => {
+  let css = "px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline disabled:bg-gray-400/80"
+
+  if (rounded) {
+    css+=" rounded-full"
+  } else {
+    css+=" rounded-md"
+  }
 
   if (outline) {
     css+=" border-[1.5px] border-indigo-500 text-indigo-500 fill-indigo-500 transition duration-500 ease select-none hover:text-white hover:fill-white hover:border-indigo-600 hover:bg-indigo-600"
@@ -64,5 +71,6 @@ Basic.args = {
   shadow: false,
   animation: false,
   icon: false,
-  outline: false
+  outline: false,
+  rounded: false
 };
