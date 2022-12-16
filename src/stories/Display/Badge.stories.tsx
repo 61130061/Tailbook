@@ -3,20 +3,25 @@ import { useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 interface BadgeProps {
+  label: string,
   remove?: boolean,
   icon?: boolean,
-  outlineColor?: boolean
+  outlineColor?: boolean,
+  rounded?: boolean,
 }
 
 export default {
   title: 'Display/Badge',
 };
 
-export const Badge = ({ remove, icon, outlineColor }: BadgeProps) => {
-  let spanCSS = "flex items-center gap-1 border rounded-full px-3 py-1 text-xs uppercase font-medium";
+export const Badge = ({ label, remove, icon, outlineColor, rounded }: BadgeProps) => {
+  let spanCSS = "flex items-center gap-1 border px-3 py-1 text-xs uppercase font-medium";
 
   if (remove) spanCSS+=" pr-2"
   if (icon) spanCSS+=" pl-2"
+
+  if (rounded) spanCSS+=" rounded-full"
+  else spanCSS+=" rounded-md"
 
   return (
     <div className="flex gap-3 text-sm">
@@ -28,7 +33,7 @@ export const Badge = ({ remove, icon, outlineColor }: BadgeProps) => {
             <svg width="14px" height="14px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z" /></svg>
           </div>
         }
-        <div>Default</div>
+        <div>default</div>
         {remove &&
           <div className="hover:cursor-pointer hover:bg-slate-100 hover:fill-blue-400 p-1 rounded-full">
             <svg version="1.1" width="8px" height="8px" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 47.971 47.971">
@@ -59,7 +64,7 @@ export const Badge = ({ remove, icon, outlineColor }: BadgeProps) => {
             </svg>
           </div>
         }
-        <div>Badge</div>
+        <div>{label}</div>
         {remove &&
           <div className="hover:cursor-pointer hover:bg-slate-100 hover:fill-emerald-400 p-1 rounded-full">
             <svg version="1.1" width="8px" height="8px" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 47.971 47.971">
@@ -91,7 +96,7 @@ export const Badge = ({ remove, icon, outlineColor }: BadgeProps) => {
             </svg>
           </div>
         }
-        <div>Badge</div>
+        <div>{label}</div>
         {remove &&
           <div className="hover:cursor-pointer hover:bg-slate-100 hover:fill-rose-400 p-1 rounded-full">
             <svg version="1.1" width="8px" height="8px" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 47.971 47.971">
@@ -109,7 +114,9 @@ export const Badge = ({ remove, icon, outlineColor }: BadgeProps) => {
   )
 }
 Badge.args = {
+  label: 'badge',
   remove: false,
   icon: true,
   outlineColor: false,
+  rounded: true
 };
