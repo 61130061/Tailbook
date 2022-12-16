@@ -15,7 +15,7 @@ export default {
 };
 
 export const Basic = ({ label, shadow, animation, icon, outline, rounded }: ButtonProps) => {
-  let css = "px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline disabled:bg-gray-400/80"
+  let css = "px-4 py-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline disabled:bg-gray-400/80"
 
   if (rounded) {
     css+=" rounded-full"
