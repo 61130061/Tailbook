@@ -77,8 +77,26 @@ TextField.args = {
   icon: false,
 };
 
+export const Valid = ({ placeholder, type }: InputProps) => {
+  let css = "px-3 py-2 rounded-lg border-[1.5px] focus:outline-none focus:ring-opacity-50 focus:ring-2 focus:ring-gray-300 invalid:border-red-400 invalid:focus:ring-red-300 invalid:focus:ring-opacity-50";
+
+  return (
+    <input
+      placeholder={placeholder}
+      className={css}
+      type={type}
+    >
+    </input>
+  )
+}
+Valid.args = {
+  placeholder: 'email@gmail.com',
+  type: 'email',
+  dark: false
+};
+
 export const Success = ({ placeholder, type }: InputProps) => {
-  let css = "text-green-500 placeholder-green-600 px-3 py-2 rounded-lg border-[1.5px] border-green-500 focus:outline-none focus:ring-opacity-50 focus:ring-2 focus:ring-green-300";
+  let css = "text-green-500 placeholder-green-400 px-3 py-2 rounded-lg border-[1.5px] border-green-500 focus:outline-none focus:ring-opacity-50 focus:ring-2 focus:ring-green-300";
 
   return (
     <input
@@ -96,7 +114,7 @@ Success.args = {
 };
 
 export const Warning = ({ placeholder, type }: InputProps) => {
-  let css = "text-yellow-500 placeholder-yellow-600 px-3 py-2 rounded-lg border-[1.5px] border-yellow-500 focus:outline-none focus:ring-opacity-50 focus:ring-2 focus:ring-yellow-300";
+  let css = "text-yellow-500 placeholder-yellow-400 px-3 py-2 rounded-lg border-[1.5px] border-yellow-500 focus:outline-none focus:ring-opacity-50 focus:ring-2 focus:ring-yellow-300";
 
   return (
     <input
@@ -114,7 +132,7 @@ Warning.args = {
 };
 
 export const Error = ({ placeholder, type }: InputProps) => {
-  let css = "text-red-500 placeholder-red-600 px-3 py-2 rounded-lg border-[1.5px] border-red-500 focus:outline-none focus:ring-opacity-50 focus:ring-2 focus:ring-red-300";
+  let css = "text-red-500 placeholder-red-400 px-3 py-2 rounded-lg border-[1.5px] border-red-500 focus:outline-none focus:ring-opacity-50 focus:ring-2 focus:ring-red-300";
 
   return (
     <input

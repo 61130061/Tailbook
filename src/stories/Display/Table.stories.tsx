@@ -98,7 +98,7 @@ export const Table = ({ border, shadow, bgHeader, divideY, divideX }: TableProps
                         <label htmlFor="checkbox-table-1" className="sr-only">checkbox</label>
                       </div>
                     </td>
-                    <td className="py-3 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <td className="py-3 px-6 text-sm font-medium text-gray-700 whitespace-nowrap dark:text-white">
                       <div className="flex gap-3 items-center">
                         <img
                           alt=""
@@ -132,10 +132,10 @@ export const Table = ({ border, shadow, bgHeader, divideY, divideX }: TableProps
                         </div>
                       </span>
                     </td>
-                    <td className="py-3 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <td className="py-3 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">
                       {d.working}
                     </td>
-                    <td className="py-3 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <td className="py-3 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">
                       {d.position}
                     </td>
                     <td className="py-3 px-6 text-sm font-medium text-right whitespace-nowrap">
