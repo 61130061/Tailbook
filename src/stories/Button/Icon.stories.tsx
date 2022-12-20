@@ -24,7 +24,7 @@ export const Icon = ({ label, shadow, animation, outline, rounded }: ButtonProps
   }
 
   if (outline) {
-    css+=" border-[1.5px] border-indigo-500 text-indigo-500 fill-indigo-500 select-none hover:text-white hover:fill-white hover:border-indigo-600 hover:bg-indigo-600"
+    css+=" border-[1.5px] border-indigo-500 text-indigo-500 fill-indigo-500 select-none hover:text-white hover:fill-white hover:border-indigo-600"
   } else {
     css+=" bg-indigo-500 text-white fill-white"
   }
