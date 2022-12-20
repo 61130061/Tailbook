@@ -140,10 +140,10 @@ export const Table = ({ border, shadow, bgHeader, divideY, divideX }: TableProps
                     </td>
                     <td className="py-3 px-6 text-sm font-medium text-right whitespace-nowrap">
                       <button
-                        className="mr-1 p-1 transition duration-500 ease select-none hover:bg-zinc-600 focus:outline-none focus:shadow-outline disabled:bg-gray-400/80 rounded-md border-[1.5px] border-zinc-500 text-zinc-500 fill-zinc-500 select-none hover:text-white hover:fill-white"
+                        className="mr-2 p-1 transition duration-500 ease select-none hover:bg-zinc-600 focus:outline-none focus:shadow-outline disabled:bg-gray-400/80 rounded-md border-[1.5px] border-transparent text-zinc-500 fill-zinc-500 select-none hover:text-white hover:fill-white"
                         type="button"
                       >
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 53.942 53.942" width="15px" height="15px">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 53.942 53.942" width="18px" height="18px">
                           <path d="M53.364,40.908c-2.008-3.796-8.981-7.912-9.288-8.092c-0.896-0.51-1.831-0.78-2.706-0.78c-1.301,0-2.366,0.596-3.011,1.68
 	c-1.02,1.22-2.285,2.646-2.592,2.867c-2.376,1.612-4.236,1.429-6.294-0.629L17.987,24.467c-2.045-2.045-2.233-3.928-0.632-6.291
 	c0.224-0.309,1.65-1.575,2.87-2.596c0.778-0.463,1.312-1.151,1.546-1.995c0.311-1.123,0.082-2.444-0.652-3.731
@@ -154,10 +154,10 @@ export const Table = ({ border, shadow, bgHeader, divideY, divideX }: TableProps
 
                       </button>
                       <button
-                        className="mr-1 p-1 transition duration-500 ease select-none hover:bg-zinc-600 focus:outline-none focus:shadow-outline disabled:bg-gray-400/80 rounded-md border-[1.5px] border-zinc-500 text-zinc-500 fill-zinc-500 select-none hover:text-white hover:fill-white"
+                        className="p-1 transition duration-500 ease select-none hover:bg-zinc-600 focus:outline-none focus:shadow-outline disabled:bg-gray-400/80 rounded-md border-[1.5px] border-transparent text-zinc-500 fill-zinc-500 select-none hover:text-white hover:fill-white"
                         type="button"
                       >
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24" width="15px" height="15px">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24" width="18px" height="18px">
                           <rect width="24" height="24" opacity="0" />
                           <path d="M19 20H5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2z" />
                           <path d="M5 18h.09l4.17-.38a2 2 0 0 0 1.21-.57l9-9a1.92 1.92 0 0 0-.07-2.71L16.66 2.6A2 2 0 0 0 14 2.53l-9 9a2 2 0 0 0-.57 1.21L4 16.91a1 1 0 0 0 .29.8A1 1 0 0 0 5 18zM15.27 4L18 6.73l-2 1.95L13.32 6z" />
