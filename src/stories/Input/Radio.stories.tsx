@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 interface RadioProps {
+  labelColor?: boolean,
 }
 
 export default {
@@ -10,7 +11,7 @@ export default {
 
 const options = ['Everything', 'Same as email', 'No push notifications'];
 
-export const Radio = ({ }: RadioProps) => {
+export const Radio = ({ labelColor }: RadioProps) => {
 
   return (
     <fieldset>
@@ -23,9 +24,12 @@ export const Radio = ({ }: RadioProps) => {
               id={"push-everything-"+i}
               name="push-notifications"
               type="radio"
-              className="appearance-none mr-3 h-3 w-3 rounded-full text-indigo-600 checked:bg-blue-500 ring-gray-300 ring-offset-1 ring-2 checked:ring-blue-500"
+              className={`${labelColor ? 'peer ':''}appearance-none mr-3 h-3 w-3 rounded-full checked:bg-blue-400 ring-gray-300 ring-offset-1 ring-2 checked:ring-blue-300 hover:cursor-pointer`}
             />
-            <label htmlFor={"push-everything-"+i} className="block text-sm font-medium text-gray-700">
+            <label 
+              htmlFor={"push-everything-" + i}
+              className={`block hover:cursor-pointer text-sm font-medium text-gray-700${labelColor ? ' peer-checked:text-blue-500':''}`}
+            >
               {d}
             </label>
           </div>
@@ -33,4 +37,7 @@ export const Radio = ({ }: RadioProps) => {
       </div>
     </fieldset>
   )
+}
+Radio.args = {
+  labelColor: true
 }
