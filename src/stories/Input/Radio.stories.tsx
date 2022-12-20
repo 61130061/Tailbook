@@ -23,7 +23,7 @@ export const Radio = ({ }: RadioProps) => {
               id={"push-everything-"+i}
               name="push-notifications"
               type="radio"
-              className="appearance-none mr-3 h-3 w-3 rounded-full text-indigo-600 checked:bg-blue-500 ring-gray-300 ring-offset-2 ring-2 checked:ring-blue-500"
+              className="appearance-none mr-3 h-3 w-3 rounded-full text-indigo-600 checked:bg-blue-500 ring-gray-300 ring-offset-1 ring-2 checked:ring-blue-500"
             />
             <label htmlFor={"push-everything-"+i} className="block text-sm font-medium text-gray-700">
               {d}

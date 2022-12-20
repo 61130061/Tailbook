@@ -6,17 +6,17 @@ interface BreadProps {
 }
 
 export default {
-  title: 'Navigation/Breadscrumbs',
+  title: 'Navigation/Breadcrumbs',
 };
 
-export const Breadscrumbs = ({ bgColor }: BreadProps) => {
+export const Breadcrumbs = ({ bgColor }: BreadProps) => {
 
   let child = ['home', 'setting', 'customization', 'blue'];
-  let containerCSS = "flex gap-2 text-blue-500 rounded-xl";
+  let containerCSS = "flex gap-2 text-indigo-400 rounded-xl";
   let linkCSS = "hover:underline hover:cursor-pointer hover:underline-offset-2"
   let currentCSS = "font-semibold" 
 
-  if (bgColor) containerCSS+=" bg-blue-100 px-5 py-3";
+  if (bgColor) containerCSS+=" bg-indigo-50 px-5 py-3";
 
   return (
     <div
@@ -32,10 +32,10 @@ export const Breadscrumbs = ({ bgColor }: BreadProps) => {
           </a>
           {i < child.length - 1 &&
             <div
-              className="fill-blue-600 stroke-blue-600 stroke-[10px]"
+              className="fill-indigo-200 stroke-indigo-200 stroke-[10px]"
             >
               <svg 
-                version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 330.002 330.002"
+                version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 330.002 330.002"
                 width="13px" 
                 height="13px"
               >
@@ -48,6 +48,6 @@ export const Breadscrumbs = ({ bgColor }: BreadProps) => {
     </div>
   )
 }
-Breadscrumbs.args = {
+Breadcrumbs.args = {
   bgColor: true
 };
