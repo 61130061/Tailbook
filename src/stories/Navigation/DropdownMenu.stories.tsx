@@ -13,7 +13,7 @@ export const DropdownMenu = ({ outline }: DropdownProps) => {
 
   let buttonCSS = "text-gray-700 hover:text-blue-700 font-medium flex items-center justify-between p-2"
 
-  if (outline) buttonCSS+=" border rounded hover:border-blue-400"
+  if (outline) buttonCSS+=" border rounded hover:border-blue-400 bg-white"
 
   return (
     <div className="h-[320px]">
@@ -52,5 +52,5 @@ export const DropdownMenu = ({ outline }: DropdownProps) => {
   )
 }
 DropdownMenu.args = {
-  outline: false
+  outline: true
 };
