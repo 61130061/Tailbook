@@ -12,7 +12,7 @@ export default {
 export const Form = ({ valid }: FormProps) => {
 
   return (
-    <form className="w-[420px] px-10 py-6 rounded-lg border shadow-lg">
+    <form className="w-[420px] bg-white px-10 py-6 rounded-lg border shadow-lg">
       <div className="flex flex-col gap-2 mb-4">
         <label>Email</label>
         <input
