@@ -6,10 +6,10 @@ interface DropdownProps {
 }
 
 export default {
-  title: 'Navigation/Dropdown Menu',
+  title: 'Navigation/Dropdown',
 };
 
-export const DropdownMenu = ({ outline }: DropdownProps) => {
+export const Dropdown = ({ outline }: DropdownProps) => {
 
   let buttonCSS = "text-gray-700 hover:text-blue-700 font-medium flex items-center justify-between p-2"
 
@@ -51,6 +51,6 @@ export const DropdownMenu = ({ outline }: DropdownProps) => {
     </div>
   )
 }
-DropdownMenu.args = {
+Dropdown.args = {
   outline: true
 };
