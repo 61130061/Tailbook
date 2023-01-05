@@ -10,7 +10,8 @@ export default {
 
 export const Breadcrumbs = ({ }: BreadProps) => {
 
-  const buttonCSS = `hover:bg-slate-50 hover:text-sky-700 px-2 py-1 rounded-lg`
+  const buttonCSS = `hover:bg-slate-50 hover:text-sky-700 px-2 py-1 rounded-lg`;
+  const strokeWidth = 2;
 
   return (
     <div className="h-[320px]">
@@ -23,7 +24,7 @@ export const Breadcrumbs = ({ }: BreadProps) => {
         </button>
         <div className="text-gray-400">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            strokeWidth={3.5} stroke="currentColor"
+            strokeWidth={strokeWidth} stroke="currentColor"
             className="w-4 h-4"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -32,7 +33,7 @@ export const Breadcrumbs = ({ }: BreadProps) => {
         <button className={buttonCSS}>Level one</button>
         <div className="text-gray-400">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            strokeWidth={3.5} stroke="currentColor"
+            strokeWidth={strokeWidth} stroke="currentColor"
             className="w-4 h-4"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -57,7 +58,7 @@ export const Breadcrumbs = ({ }: BreadProps) => {
         </div>
         <div className="text-gray-400">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            strokeWidth={3.5} stroke="currentColor"
+            strokeWidth={strokeWidth} stroke="currentColor"
             className="w-4 h-4"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -66,7 +67,7 @@ export const Breadcrumbs = ({ }: BreadProps) => {
         <button className={buttonCSS}>Level six</button>
         <div className="text-gray-400">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            strokeWidth={3.5} stroke="currentColor"
+            strokeWidth={strokeWidth} stroke="currentColor"
             className="w-4 h-4"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -79,5 +80,23 @@ export const Breadcrumbs = ({ }: BreadProps) => {
     </div>
   )
 }
-Breadcrumbs.args = {
-};
+
+export const Simple = ({ }: BreadProps) => {
+
+  const itemCSS = "px-1 font-semibold hover:underline hover:underline-offset-2";
+  const dividerCSS = "font-thin text-gray-600";
+
+  return (
+    <div className="flex gap-1 text-sm text-gray-700">
+      <button className={itemCSS}>Home</button>
+      <div className={dividerCSS}>/</div>
+      <button className={itemCSS}>Level one</button>
+      <div className={dividerCSS}>/</div>
+      <button className={itemCSS}>Level two</button>
+      <div className={dividerCSS}>/</div>
+      <button className={itemCSS}>Level three</button>
+      <div className={dividerCSS}>/</div>
+      <div className="text-gray-400">Active Page</div>
+    </div>
+  )
+}
