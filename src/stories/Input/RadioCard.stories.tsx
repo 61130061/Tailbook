@@ -30,7 +30,6 @@ export const RadioCard = () => {
             id={"id-" + i}
             name="push-notifications"
             type="radio"
-            checked="true"
             className={`peer appearance-none mr-3 h-3 w-3 rounded-full checked:bg-gray-800 ring-gray-300 ring-offset-2 ring-1 checked:ring-gray-600 hover:cursor-pointer absolute right-3 top-5`}
           />
           <label
